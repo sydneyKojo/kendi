@@ -1,0 +1,16 @@
+<div class="mb-6 text-left">
+  <label
+    for="large-input"
+    class="block mb-2 px-4 text-gray-800/70 text-sm font-medium"
+    >{{ label }}</label
+  >
+  <input
+    [formControl]="formControl"
+    [name]="name"
+    [type]="type"
+    [placeholder]="placeholder"
+    [value]="value"
+    (blur)="onTouched()"
+    class="block w-full p-4 px-6 placeholder-gray-500 rounded-full text-base focus:ring-blue-500/20 bg-white focus:border-blue-500"
+  />
+</div>

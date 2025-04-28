@@ -1,0 +1,73 @@
+<container>
+    <!-- <div class="p-3">
+      <img src="/img/bg_2.jpg" class="rounded-3xl m-auto" />
+    </div> -->
+    <div class="flex flex-col justify-between pt-4 px-4 h-full">
+      <h1>Your Faith Journey</h1>
+      <h2 class="font-light">
+        How do you want to grow spiritually?
+      </h2>
+      <div>
+        
+  <ul class="flex flex-col w-3/4 m-auto gap-6">
+      <li>
+          <label for="hosting-small" class="inline-flex items-center justify-between w-full p-5 text-gr ay-500 bg-white/50 border border-orange-200/70 rounded-2xl cursor-pointer dark:hover:text-gr ay-300 dark:borde r-gray-700 dark:peer-checked:text-orange-500 peer-checked:border-orange-600 dark:peer-checked:borde r-orange-600 peer-checked:text-orange-600 hover:text-gr ay-600 hover:bg-gr ay-100 dark:text-gr ay-400 dark:bg-gr ay-800 dark:hover:bg-gr ay-700">                           
+              <div class="block text-left">
+                  <h4>Daily Devotionals</h4>
+              </div>
+            <label class="inline-flex items-center mb-5 cursor-pointer">
+                <input type="checkbox" (click)="togglePrefernceItem('devotionals')" class="sr-only peer">
+                <div class="relative w-11 h-6 my-auto bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600 dark:peer-checked:bg-orange-600"></div>
+            </label>
+
+          </label>
+      </li>
+      <li>
+          <label for="hosting-big" class="inline-flex items-center justify-between w-full p-5 text-gr ay-500 bg-white/50 border border-orange-200/70 rounded-2xl cursor-pointer dark:hover:text-gr ay-300 dark:borde r-gray-700 dark:peer-checked:text-orange-500 peer-checked:border-orange-600 dark:peer-checked:borde r-orange-600 peer-checked:text-orange-600 hover:text-gr ay-600 hover:bg-gr ay-100 dark:text-gr ay-400 dark:bg-gr ay-800 dark:hover:bg-gr ay-700">
+              <div class="block text-left">
+                  <h4>Prayer Reminders</h4>
+              </div>
+            <label class="inline-flex items-center mb-5 cursor-pointer">
+                <input type="checkbox" (click)="togglePrefernceItem('prayer-reminders')" class="sr-only peer">
+                <div class="relative w-11 h-6 my-auto bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600 dark:peer-checked:bg-orange-600"></div>
+            </label>
+
+          </label>
+      </li>
+      <li>
+          <label for="hosting-big" class="inline-flex items-center justify-between w-full p-5 text-gr ay-500 bg-white/50 border border-orange-200/70 rounded-2xl cursor-pointer dark:hover:text-gr ay-300 dark:borde r-gray-700 dark:peer-checked:text-orange-500 peer-checked:border-orange-600 dark:peer-checked:borde r-orange-600 peer-checked:text-orange-600 hover:text-gr ay-600 hover:bg-gr ay-100 dark:text-gr ay-400 dark:bg-gr ay-800 dark:hover:bg-gr ay-700">
+              <div class="block text-left">
+                  <h4>Weekly Reflections</h4>
+              </div>
+            <label class="inline-flex items-center mb-5 cursor-pointer">
+                <input type="checkbox" (click)="togglePrefernceItem('reflections')" class="sr-only peer">
+                <div class="relative w-11 h-6 my-auto bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600 dark:peer-checked:bg-orange-600"></div>
+            </label>
+
+          </label>
+      </li>
+      <li>
+          <label for="hosting-big" class="inline-flex items-center justify-between w-full p-5 text-gr ay-500 bg-white/50 border border-orange-200/70 rounded-2xl cursor-pointer dark:hover:text-gr ay-300 dark:borde r-gray-700 dark:peer-checked:text-orange-500 peer-checked:border-orange-600 dark:peer-checked:borde r-orange-600 peer-checked:text-orange-600 hover:text-gr ay-600 hover:bg-gr ay-100 dark:text-gr ay-400 dark:bg-gr ay-800 dark:hover:bg-gr ay-700">
+              <div class="block text-left">
+                  <h4>Christian Journaling</h4>
+              </div>
+            <label class="inline-flex items-center mb-5 cursor-pointer">
+                <input type="checkbox" (click)="togglePrefernceItem('journaling')" class="sr-only peer">
+                <div class="relative w-11 h-6 my-auto bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600 dark:peer-checked:bg-orange-600"></div>
+            </label>
+
+          </label>
+      </li>
+  </ul>
+  
+      </div>
+      <div>
+        <cButton (click)="updateProfile()">Continue</cButton>
+        <br />
+        <!-- <a [routerLink]="['login']" class="font-medium text-sm text-orange-600 dark:text-orange-500"
+        >Existing User? Login here</a
+      > -->
+      </div>
+    </div>
+  </container>
+  

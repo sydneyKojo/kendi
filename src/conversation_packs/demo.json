@@ -1,0 +1,198 @@
+[
+    {
+      "id": 1,
+      "title": "The Movie That Changed You",
+      "description": "Talk about a movie that left a deep impact on you. Why did it move you?",
+      "viewpoints": [
+        "What emotions did it bring out?",
+        "Have you watched it again after that first time?"
+      ],
+      "tags": ["entertainment", "life", "knowing each other"],
+      "difficulty": "Easy",
+      "time_estimate": "5-10 min",
+      "type": "General"
+    },
+    {
+      "id": 2,
+      "title": "The Moral Dilemma",
+      "description": "If you found a wallet full of cash on the street, what would you do?",
+      "viewpoints": [
+        "Would your choice change if no one was watching?",
+        "Do you think honesty is situational?"
+      ],
+      "tags": ["dilemma", "life", "ethics"],
+      "difficulty": "Medium",
+      "time_estimate": "10-20 min",
+      "type": "General"
+    },
+    {
+      "id": 3,
+      "title": "Faith Under Pressure",
+      "description": "Have you ever struggled to hold onto your faith during tough times?",
+      "viewpoints": [
+        "What helped you stay grounded?",
+        "Is doubt a part of belief?"
+      ],
+      "tags": ["faith", "intimate", "life"],
+      "difficulty": "Deep",
+      "time_estimate": "20+ min",
+      "type": "Faith"
+    },
+    {
+      "id": 4,
+      "title": "Music Time Machine",
+      "description": "If you could attend any concert from any era, which would it be?",
+      "viewpoints": [
+        "Why that artist or band?",
+        "Would you want to meet the artist backstage?"
+      ],
+      "tags": ["music", "entertainment", "dreams"],
+      "difficulty": "Easy",
+      "time_estimate": "5-10 min",
+      "type": "General"
+    },
+    {
+      "id": 5,
+      "title": "Redefining Success",
+      "description": "What does success mean to you personally?",
+      "viewpoints": [
+        "Has your definition of success changed over time?",
+        "Do you think society defines success wrongly?"
+      ],
+      "tags": ["life", "philosophy", "knowing each other"],
+      "difficulty": "Medium",
+      "time_estimate": "10-20 min",
+      "type": "General"
+    },
+    {
+      "id": 6,
+      "title": "The Unpopular Opinion",
+      "description": "Share an opinion you have that most people disagree with.",
+      "viewpoints": [
+        "Have you ever been criticized for it?",
+        "Would you ever change your mind?"
+      ],
+      "tags": ["politics", "life", "debate"],
+      "difficulty": "Medium",
+      "time_estimate": "10-20 min",
+      "type": "General"
+    },
+    {
+      "id": 7,
+      "title": "What Is Worship to You?",
+      "description": "Describe what true worship looks and feels like in your life.",
+      "viewpoints": [
+        "Is it more than singing?",
+        "How do you worship in daily life?"
+      ],
+      "tags": ["faith", "intimate", "life"],
+      "difficulty": "Deep",
+      "time_estimate": "20+ min",
+      "type": "Faith"
+    },
+    {
+      "id": 8,
+      "title": "Would You Rather?",
+      "description": "Would you rather have unlimited time or unlimited money?",
+      "viewpoints": [
+        "Why would you choose one over the other?",
+        "How would your choice change your life?"
+      ],
+      "tags": ["dilemma", "life", "philosophy"],
+      "difficulty": "Easy",
+      "time_estimate": "5-10 min",
+      "type": "General"
+    },
+    {
+      "id": 9,
+      "title": "Friendship Check-In",
+      "description": "What do you think makes a friendship last through the years?",
+      "viewpoints": [
+        "What qualities do you value most in a friend?",
+        "When was the last time you truly appreciated a friend?"
+      ],
+      "tags": ["relationships", "life", "knowing each other"],
+      "difficulty": "Medium",
+      "time_estimate": "10-20 min",
+      "type": "General"
+    },
+    {
+      "id": 10,
+      "title": "Battle of the Eras",
+      "description": "Would you prefer to live in the past, present, or future?",
+      "viewpoints": [
+        "Which era feels like 'home' to you?",
+        "What about today would you take back with you?"
+      ],
+      "tags": ["life", "philosophy", "dreams"],
+      "difficulty": "Medium",
+      "time_estimate": "10-20 min",
+      "type": "General"
+    },
+    {
+      "id": 11,
+      "title": "Describe Your Prayer Life",
+      "description": "Is your prayer life structured, spontaneous, or something else?",
+      "viewpoints": [
+        "How has your prayer life evolved?",
+        "What challenges you in prayer?"
+      ],
+      "tags": ["faith", "intimate", "daily walk"],
+      "difficulty": "Deep",
+      "time_estimate": "20+ min",
+      "type": "Faith"
+    },
+    {
+      "id": 12,
+      "title": "Guilty Pleasures",
+      "description": "Share something small you secretly enjoy that others might find silly.",
+      "viewpoints": [
+        "Why do you think you love it?",
+        "Would you ever admit it to others?"
+      ],
+      "tags": ["entertainment", "life", "fun"],
+      "difficulty": "Easy",
+      "time_estimate": "5-10 min",
+      "type": "General"
+    },
+    {
+      "id": 13,
+      "title": "Doubt in Faith",
+      "description": "Have you ever doubted God? How did you process it?",
+      "viewpoints": [
+        "Was there a turning point?",
+        "Did someone help you during that season?"
+      ],
+      "tags": ["faith", "intimate", "life"],
+      "difficulty": "Deep",
+      "time_estimate": "20+ min",
+      "type": "Faith"
+    },
+    {
+      "id": 14,
+      "title": "Music That Moves You",
+      "description": "What song can instantly lift your mood?",
+      "viewpoints": [
+        "Is there a memory tied to that song?",
+        "Would you share it with someone close to you?"
+      ],
+      "tags": ["music", "entertainment", "knowing each other"],
+      "difficulty": "Easy",
+      "time_estimate": "5-10 min",
+      "type": "General"
+    },
+    {
+      "id": 15,
+      "title": "Choosing Joy",
+      "description": "How do you actively choose joy during difficult times?",
+      "viewpoints": [
+        "Is it a mindset or an action?",
+        "Who or what helps you refocus?"
+      ],
+      "tags": ["faith", "life", "daily walk"],
+      "difficulty": "Medium",
+      "time_estimate": "10-20 min",
+      "type": "Faith"
+    }
+  ]
+  

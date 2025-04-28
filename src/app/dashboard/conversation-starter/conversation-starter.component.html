@@ -1,0 +1,23 @@
+
+<container>
+    <div>
+        <h2>Every Great Connection Starts with a Question</h2>
+        <h4 class="font-light">A topic begins a journey beyond small talk.</h4>
+        <div class="px-2 flex gap-2">
+        <div class="flex flex-no-wrap gap-2 overflow-x-auto w-full border-b-2 border-orange-600 justify-center px-2 pb-0 pt-4">
+                <button class="{{`py-2 px-4 font-bold text-nowrap ring-1 capitalize ${topic.type.toLowerCase() === 'faith' ? 'text-white bg-orange-500 hover:bg-orange-600' : 'text-orange-500 hover:text-orange-600'} transition rounded-t-xl w-auto`}}">Faith-based topics</button>
+                <button class="{{`py-2 px-4 font-bold text-nowrap ring-1 capitalize  ${topic.type.toLowerCase() === 'general' ? 'text-white bg-orange-500 hover:bg-orange-600' : 'text-orange-500 hover:text-orange-600'} transition rounded-t-xl w-auto`}}">General discussions</button>
+            </div>
+        </div>
+        <div class="px-2 flex gap-2">
+        <div class="flex flex-no-wrap gap-1 overflow-x-auto justify-start w-full shadow-inner p-2 hide-scrollbar">
+            <h6 class="text-orange-900/80 my-auto">Tags: </h6>
+            @for (tag of topic.tags; track tag) {
+                <button class="p-1 text-nowrap text-orange-500 capitalize hover:text-orange-600 transition rounded-full w-auto">{{tag}}</button>
+            }
+        </div>
+    </div>
+    </div>
+       
+  </container>
+  

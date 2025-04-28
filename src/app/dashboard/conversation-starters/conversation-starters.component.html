@@ -1,0 +1,55 @@
+
+<container>
+    <!-- <div class="p-3">
+      <img src="/img/bg_2.jpg" class="rounded-3xl m-auto" />
+    </div> -->
+    <!-- <div class="flex flex-col justify-between pt-4 px-4 h-full"> -->
+      <!-- <div class="flex-grow"> -->
+        <h1>"Let's Spark Something Meaningful"</h1>
+      <h4 class="font-light">
+        Dive into conversations that build bridges, deepen bonds, and light up your world.
+      </h4>
+      <!-- <h6 class="text-left p-2 px-4">Conversation filters</h6> -->
+      <div class="px-2 flex gap-2">
+        <div class="flex flex-no-wrap gap-2 overflow-x-auto w-full border-b-2 border-orange-600 justify-center px-2 pb-0 pt-4">
+            <!-- @for (tag of tags; track tag) { -->
+                <button (click)="filterTopic('faith')" class="{{`py-2 px-4 font-bold text-nowrap ring-1 capitalize ${filtered_topic === 'faith' ? 'text-white bg-orange-500 hover:bg-orange-600' : 'text-orange-500 hover:text-orange-600'} transition rounded-t-xl w-auto`}}">Faith-based topics</button>
+                <button (click)="filterTopic('general')" class="{{`py-2 px-4 font-bold text-nowrap ring-1 capitalize  ${filtered_topic === 'general' ? 'text-white bg-orange-500 hover:bg-orange-600' : 'text-orange-500 hover:text-orange-600'} transition rounded-t-xl w-auto`}}">General discussions</button>
+            <!-- } -->
+          </div>
+      </div>
+      <div class="px-2 flex gap-2">
+        <div class="flex flex-no-wrap gap-2 overflow-x-auto w-full shadow-inner rounded-xl bg-white/20 p-2 hide-scrollbar">
+            @for (tag of tags; track tag) {
+                <button (click)="filterTag(tag)" class="py-2 px-4 shadow-sm text-white text-nowrap bg-orange-500 capitalize hover:bg-orange-600 transition rounded-full w-auto">{{tag}}</button>
+            }
+          </div>
+        </div>
+        <div *ngIf="filtered_tag.length > 0" class="px-4 text-left text-gray-500 capitalize"><h6> Filtered by tag: {{filtered_tag}}</h6></div>
+      <!-- </div> -->
+      <div class="flex-grow p-2">
+        
+        <ul class="flex flex-col w-3/4 m-auto gap-6">
+            @for (topic of topics; track topic.id) {
+            @if ((filtered_topic.length === 0 || (filtered_topic.length > 0 && topic.type.toLowerCase() === filtered_topic)) && (filtered_tag.length === 0 || (filtered_tag.length > 0 && topic.tags.includes(filtered_tag)))) {
+                <li>
+                    <a [routerLink]="`/dashboard/conversation-topics/${topic.id}`" class="w-full">
+                   <label for="hosting-small" class="inline-flex items-left justify-between w-full p-5 bg-white/50 border border-orange-200/70 rounded-2xl cursor-pointer">                           
+                       <div class="block text-left">
+                           <h5>{{topic.title}}</h5>
+                           <p>{{topic.description}}</p>
+                       </div>
+                       <svg class="my-auto w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                       </svg>
+                   </label></a>
+               </li>
+            }
+        }
+        </ul>
+  
+      <!-- </div>
+      <div class="flex-grow"></div> -->
+    </div>
+  </container>
+  

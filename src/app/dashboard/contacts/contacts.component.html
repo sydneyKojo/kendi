@@ -1,0 +1,55 @@
+@if(showContactedModal){
+    <div class="h-screen w-screen bg-black/50 flex flex-col justify-center fixed z-[500000]">
+
+    <div class="relative p-4 m-auto w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <!-- <h3 class="text-lg font-semibold text-gray-900">
+                    Success
+                </h3> -->
+                <button (click)="toggleContactModal()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="crud-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6">
+                <h4 class="text-green-500">Marking this as reached out to</h4>
+            </div>
+        </div>
+    </div>  
+</div>
+}
+
+<container>
+    <div class="flex flex-col align-left justify-between pt-4 px-4 h-full">
+      <div class="flex-grow">
+        <h3>My added contacts</h3>
+        <h2 class="font-light"></h2>
+        <div class="flex flex-col gap-3 w-3/4 m-auto pt-8">
+            @for (contact of contacts(); track $index) {    
+                <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 border-gray-200">
+                    <img class="rounded-full h-32 w-32 md:rounded-none md:rounded-s-lg" src="{{contact.avatar}}" alt="">
+                    <div class="flex flex-col text-left p-4 gap-3 leading-normal rounded-xl">
+                        <h4 class="tracking-tight">{{contact.name}}</h4>
+                        <div>
+                            <p class="font-bold text-gray-700 capitalize">{{contact.contact_type}} - <span class="text-bold">{{contact.contact}}</span></p>
+                            <p class="font-bold text-gray-700 capitalize">Contact Frequency - <span class="text-bold">{{contact.frequency}}</span></p>
+                            <p class="font-bold text-gray-700 capitalize">Contacted - <span class="text-bold">{{contact.tally}} times</span></p>
+                            <p class="font-bold text-gray-700 capitalize">Last Contacted - <span class="text-bold">{{contact.tally === 0 ? 'N/A' : getDate(contact.last_contacted)}}</span></p>
+                        </div>
+                        <button type="button" (click)="reachOutTo(contact)" class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
+                            Reach out
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+      </div>
+    </div>
+  </container>
+  

@@ -1,0 +1,132 @@
+@if(isOpenAlert){
+    <div class="h-screen w-screen bg-black/50 flex flex-col justify-center fixed z-[500000]">
+
+    <div class="relative p-4 m-auto w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <!-- <h3 class="text-lg font-semibold text-gray-900">
+                    Success
+                </h3> -->
+                <button (click)="toggleModal('alert')" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="crud-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6">
+                <h4 class="text-green-500">New Contact Added!</h4>
+            </div>
+        </div>
+    </div>  
+</div>
+}
+
+@if(isOpenModal){
+    <div class="h-screen w-screen bg-black/50 flex flex-col justify-center fixed z-[500000]">
+
+    <div class="relative p-4 m-auto w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">
+                    Add New Connection
+                </h3>
+                <button (click)="toggleModal()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="crud-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <form class="p-4 md:p-5" [formGroup]="addContactForm" (ngSubmit)="handleSubmit()">
+                <div class="grid gap-4 mb-4 grid-cols-2">
+                    <div class="col-span-2">
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
+                        <input type="text" formControlName="name" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="His/Her name" required="">
+                    </div>
+                    <div class="col-span-3 sm:col-span-1">
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Contact Type</label>
+                        <select  formControlName="contact_type" id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5    ">
+                            <option selected="">Select Contact type</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="price" class="block mb-2 text-sm font-medium text-gray-900">Contact</label>
+                        <input type="text" formControlName="contact" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="+(44) 079003 2232" required="">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Contact Frequency</label>
+                        <select  formControlName="frequency" id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5    ">
+                            <option selected="">Select Contact Frequency</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="other">Every other week</option>
+                        </select>
+                    </div>
+                    <div class="col-span-2">
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Select Avatar</label>
+                        <div class=" flex flex-row flex-nowrap overflow-x-auto w-full gap-3">
+                        @for (item of avatars; track item.id) {
+                            @if (item.id === selected) {
+                                <div class="rounded-full border-2 border-green-400 h-24 min-w-24 p-0">
+                                    <img class="h-full m-0 w-full rounded-full" (click)="setAvatar(item.id)" src="{{item.src}}" />
+                                </div>
+                            }
+                            @else { 
+                                <img class="h-24 w-24 rounded-full" (click)="setAvatar(item.id)" src="{{item.src}}" />
+                            }
+                            }
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
+                    <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                    Add Contact
+                </button>
+            </form>
+        </div>
+    </div>  
+</div>
+}
+
+<container>
+    <!-- <div class="p-3">
+      <img src="/img/bg_2.jpg" class="rounded-3xl m-auto" />
+    </div> -->
+    <div class="flex flex-col justify-between pt-4 px-4 h-full">
+      <div class="flex-grow">
+        <h1>Build your circle</h1>
+      <h4 class="font-light">
+        Create and sustain stronger bonds with friends, family, and your walk with God<br>One check-in, plan, and prayer at a time
+      </h4>
+      </div>
+      <div class="flex-grow">
+        
+        <ul class="flex flex-col w-3/4 m-auto gap-6">
+            <li>
+                 <button (click)="toggleModal()" class="w-full">
+                <label for="hosting-small" class="inline-flex items-left justify-between w-full p-5 bg-white/50 border border-orange-200/70 rounded-2xl cursor-pointer">                           
+                    <div class="block text-left">
+                        <h4>Add a Contact</h4>
+                    </div>
+                    <svg class="my-auto w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </label></button>
+            </li>
+        </ul>
+  
+      </div>
+      <div class="flex-grow"></div>
+    </div>
+  </container>
+  

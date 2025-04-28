@@ -1,0 +1,36 @@
+<container>
+    <!-- <div class="p-3">
+      <img src="/img/welcome_banner.jpg" class="rounded-3xl m-auto" />
+    </div> -->
+    <form class="flex flex-col justify-between px-4 h-full">
+      <div>
+        <h2>Create an account</h2>
+      <h5 class="font-base">Because every great relationship starts with intention
+      </h5>
+      </div>
+  
+      <div>
+        <h4 class="text-red-500 text-left px-2" *ngIf="showErrorHeading">{{errorMessage}}</h4>
+        <cInput [formControl]="name" name="name" [type]="'text'" label="Full name *" placeholder="Arnold Lewin"></cInput>
+        <p class="text-red-500 text-left -mt-4 px-2" *ngIf="name?.invalid && (name?.dirty || name?.touched)">Name error</p>
+        <cInput [formControl]="email" name="email" [type]="'email'" label="Email *" placeholder="mail@company.com"></cInput>
+        <p class="text-red-500 text-left -mt-4 px-2" *ngIf="email?.invalid && (email?.dirty || email?.touched)">Email error</p>
+        <cInput [formControl]="password" name="password" label="Password *" type="password" placeholder="**********"></cInput>
+        <p class="text-red-500 text-left -mt-4 px-2" *ngIf="password?.invalid && (password?.dirty || password?.touched)">Password error</p>
+      </div>
+      <div>
+        <!-- <a
+          [routerLink]="['social-style']"
+        > -->
+        <button type="button" (click)="handleSignUp()" class="bg-orange-500 hover:bg-orange-400 transition duration-250 px-8 py-3 rounded-full text-xl font-semibold cursor-pointer text-white">
+          Submit
+      </button>
+        <!-- </a> -->
+        <br />
+        <a [routerLink]="['/login']" class="font-medium text-sm"
+        >Existing User? Login here</a
+      >
+      </div>
+    </form>
+  </container>
+  

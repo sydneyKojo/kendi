@@ -1,0 +1,31 @@
+<container>
+    <!-- <div class="p-3">
+      <img src="/img/welcome_banner.jpg" class="rounded-3xl m-auto" />
+    </div> -->
+    <div class="flex flex-col justify-between px-4 h-full">
+      <h2>Welcome back</h2>
+      <!-- <h5 class="font-base">
+      </h5> -->
+      
+      
+      <div>
+        <h4 class="text-red-500 text-left px-2" *ngIf="showErrorHeading">{{errorMessage}}</h4>
+        <cInput [formControl]="email" name="email" [type]="'email'" label="Email *" placeholder="mail@company.com"></cInput>
+        <p class="text-red-500 text-left -mt-4 px-2" *ngIf="email?.invalid && (email?.dirty || email?.touched)">Email error</p>
+        <cInput [formControl]="password" name="password" label="Password *" type="password" placeholder="**********"></cInput>
+        <p class="text-red-500 text-left -mt-4 px-2" *ngIf="password?.invalid && (password?.dirty || password?.touched)">Password error</p>
+      </div>
+      <div>
+        <!-- <a
+          [routerLink]="['/social-style']"
+        > -->
+        <cButton (click)="handlelogin()" >Login</cButton>
+        <!-- </a> -->
+        <br />
+        <a [routerLink]="['/create-account']" class="font-medium text-sm"
+        >New User? Create an account</a
+      >
+      </div>
+    </div>
+  </container>
+  
