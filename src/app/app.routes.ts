@@ -14,6 +14,7 @@ import { AddComponent } from './dashboard/add/add.component';
 import { ContactsComponent } from './dashboard/contacts/contacts.component';
 import { ConversationStartersComponent } from './dashboard/conversation-starters/conversation-starters.component';
 import { ConversationStarterComponent } from './dashboard/conversation-starter/conversation-starter.component';
+import { DevotionalComponent } from './dashboard/devotional/devotional.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/dashboard/home', pathMatch: 'full' },
@@ -41,6 +42,7 @@ export const routes: Routes = [
       { path: 'conversation-topics', component: ConversationStartersComponent },
       { path: 'conversation-topics/:id', component: ConversationStarterComponent },
       { path: 'contacts', component: ContactsComponent },
+      { path: 'devotionals', component: DevotionalComponent },
     ],
   },
   {path: 'auth',

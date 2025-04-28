@@ -9,13 +9,70 @@
                 <button class="{{`py-2 px-4 font-bold text-nowrap ring-1 capitalize  ${topic.type.toLowerCase() === 'general' ? 'text-white bg-orange-500 hover:bg-orange-600' : 'text-orange-500 hover:text-orange-600'} transition rounded-t-xl w-auto`}}">General discussions</button>
             </div>
         </div>
-        <div class="px-2 flex gap-2">
+        <div class="px-2 gap-2">
         <div class="flex flex-no-wrap gap-1 overflow-x-auto justify-start w-full shadow-inner p-2 hide-scrollbar">
-            <h6 class="text-orange-900/80 my-auto">Tags: </h6>
+            <h6 class="text-gray-900/80 my-auto">Tags: </h6>
             @for (tag of topic.tags; track tag) {
-                <button class="p-1 text-nowrap text-orange-500 capitalize hover:text-orange-600 transition rounded-full w-auto">{{tag}}</button>
+                <p class="text-nowrap pr-1 text-gray-900 capitalize transition rounded-full w-auto">{{tag}},</p>
             }
         </div>
+        <div class="text-left p-4">
+            <h3>{{topic.title}}</h3>
+            <h4 class="font-medium">{{topic.description}} </h4>
+            <h5 class="font-medium">A {{topic.time_estimate}} conversation of {{topic.difficulty}} difficulty with the following viewpoints</h5>
+            <ul class="list-disc px-6 my-2">
+                @for (tag of topic.viewpoints; track tag) {
+                    <li><p>{{tag}}</p></li>
+                }
+                
+             </ul>
+        </div>
+        <div class="text-left p-4 py-6">
+            <h4>Conversation Guidelines Template</h4>
+            <div>
+                <h5 class="font-medium">Start with a Warm Greeting; Make the other person feel comfortable and welcomed.</h5>
+                <ul class="list-disc px-6 my-2">
+                    <li><p>Example: "Hi, how's your day been so far?"</p></li>                
+                </ul>
+                <div class="p-3">
+                    <img src="/img/welcome_banner.jpg" class="rounded-3xl m-auto" />
+                </div>
+            </div>
+            <div>
+                <h5 class="font-medium">Light Small Talk, Spend 1 to 2 minutes on easy, casual topics before diving deeper.</h5>
+                <ul class="list-disc px-6 my-2">
+                    <li><p>Example: "How's your week going?"</p></li>                
+                </ul>
+                <div class="p-3">
+                    <img src="/img/bg_2.jpg" class="rounded-3xl m-auto" />
+                </div>
+            </div>
+            <div>
+                <h5 class="font-medium">Transition to the Main Topic, Gently lead into the actual topic without making it feel sudden.</h5>
+                <ul class="list-disc px-6 my-2">
+                    <li><p>Example: "I was thinking about {{topic.description}} and I'm curious what you think"</p></li>                
+                </ul>
+                <div class="p-3">
+                    <img src="/img/bg-4.jpg" class="rounded-3xl m-auto" />
+                </div>
+            </div>
+            <div>
+                <h5 class="font-medium">Deepen the Conversation, After initial answers, you can go deeper with "why" and "how" question.</h5>
+                <ul class="list-disc px-6 my-2">
+                    <li><p>Example: "How did that 'answer' change the way you think about {{topic.title}}?"</p></li>                
+                </ul>
+                <div class="p-3">
+                    <img src="/img/bg-3.jpg" class="rounded-3xl m-auto" />
+                </div>
+            </div>
+            <div>
+                <h5 class="font-medium">Wrap Up Gently, After a good conversation, slow it down and end positively.</h5>
+                <ul class="list-disc px-6 my-2">
+                    <li><p>Example: "I feel like I understand you better after talking about this."</p></li>                
+                </ul>
+            </div>
+        </div>
+        
     </div>
     </div>
        

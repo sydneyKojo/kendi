@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from "../../components/container/container.component";
-import topics from '../../../conversation_packs/demo.json'
+import topics from '../../../data/conversation_packs.json'
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 

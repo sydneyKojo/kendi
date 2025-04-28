@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import topics from '../../../conversation_packs/demo.json'
+import topics from '../../../data/conversation_packs.json'
 import { iCTopic } from '../../interfaces/iCTopic';
 import { ContainerComponent } from "../../components/container/container.component";
 
@@ -21,6 +21,7 @@ export class ConversationStarterComponent implements OnInit {
         this.topic = topic
       }
     })
+    console.log(this.topic)
   }
   
 }
