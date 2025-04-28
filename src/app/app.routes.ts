@@ -15,6 +15,7 @@ import { ContactsComponent } from './dashboard/contacts/contacts.component';
 import { ConversationStartersComponent } from './dashboard/conversation-starters/conversation-starters.component';
 import { ConversationStarterComponent } from './dashboard/conversation-starter/conversation-starter.component';
 import { DevotionalComponent } from './dashboard/devotional/devotional.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/dashboard/home', pathMatch: 'full' },
@@ -51,4 +52,5 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
   ]},
+  {path: '**', component: NotfoundComponent}
 ];
